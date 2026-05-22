@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/result-0-128x128-1.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Startmyproject</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/popup-overlay-plugin/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=JQe6he"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=JQe6he" type="text/css">
+
+  
+  
+  
+
+</head>
+<body>
+  
+  <div id="custom-html-1">
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrionCodix — Navbar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Geist',-apple-system,sans-serif;}
+.ocnav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.09);box-sizing:border-box;}
+.ocnav-logo{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;letter-spacing:-0.01em;color:#0a0a0a;text-decoration:none;flex-shrink:0;}
+.ocnav-logo svg{width:26px;height:29px;flex-shrink:0;}
+.ocnav-links{display:flex;align-items:center;gap:4px;}
+.ocnav-link{font-size:13.5px;color:#666;text-decoration:none;padding:6px 14px;border-radius:100px;transition:color 0.2s,background 0.2s;white-space:nowrap;}
+.ocnav-link:hover{color:#0a0a0a;background:#f5f5f5;}
+.ocnav-link.active{color:#0a0a0a;font-weight:500;}
+.ocnav-right{display:flex;align-items:center;gap:10px;}
+.ocnav-btn{display:inline-flex;align-items:flex-start;justify-content:center;overflow:hidden;height:42px;padding:0 22px;border-radius:100px;border:1px solid #0a0a0a;background:#0a0a0a;color:#fff;font-size:13.5px;font-weight:400;letter-spacing:-0.01em;cursor:pointer;text-decoration:none;transition:background 0.25s,border-color 0.25s;box-sizing:border-box;}
+.ocnav-btn:hover{background:#222;border-color:#222;}
+.ocnav-btn .pi{display:flex;flex-direction:column;transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);}
+.ocnav-btn:hover .pi{transform:translateY(-42px);}
+.ocnav-btn .pt{display:flex;align-items:center;justify-content:center;color:#fff;height:42px;white-space:nowrap;flex-shrink:0;}
+.ocnav-burger{width:42px;height:42px;border-radius:50%;border:1px solid rgba(0,0,0,0.22);background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;transition:border-color 0.25s;flex-shrink:0;}
+.ocnav-burger:hover{border-color:rgba(0,0,0,0.7);}
+.ocnav-burger span{display:block;width:14px;height:1.5px;background:#0a0a0a;border-radius:2px;transition:transform 0.3s,opacity 0.2s;}
+.ocnav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.ocnav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.ocnav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.ocnav-drawer{position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,0.09);padding:16px 20px 24px;display:flex;flex-direction:column;gap:4px;z-index:8999;transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1),opacity 0.25s;box-shadow:0 16px 48px rgba(0,0,0,0.08);box-sizing:border-box;}
+.ocnav-drawer.open{transform:translateY(0);opacity:1;pointer-events:all;}
+.ocnav-drawer a{display:flex;align-items:center;font-size:15px;color:rgba(0,0,0,0.55);text-decoration:none;padding:12px 16px;border-radius:12px;transition:background 0.2s,color 0.2s;font-weight:400;}
+.ocnav-drawer a:hover,.ocnav-drawer a.active{background:#f5f5f5;color:#0a0a0a;}
+.ocnav-drawer a.active{font-weight:500;}
+.ocnav-drawer-divider{height:1px;background:rgba(0,0,0,0.09);margin:8px 0;}
+.ocnav-drawer-cta{margin-top:4px;}
+.ocnav-drawer-cta .ocnav-btn{
+  width:100%;
+  height:46px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.ocnav-drawer-cta .ocnav-btn .pi{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);
+}
+.ocnav-drawer-cta .ocnav-btn .pt{
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ocnav-drawer-cta .ocnav-btn:hover .pi{transform:translateY(-46px);}
+.ocnav-drawer-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:46px;
+  border-radius:100px;
+  background:#0a0a0a;
+  color:#ffffff !important;
+  font-family:'Geist',-apple-system,sans-serif;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  letter-spacing:-0.01em;
+}
+.ocnav-drawer-btn:hover{background:#222;}
+@media(min-width:769px){.ocnav-drawer{display:none!important;}.ocnav-burger{display:none!important;}}
+@media(max-width:768px){.ocnav{padding:0 20px;}.ocnav-links{display:none!important;}.ocnav-right .ocnav-btn{display:none!important;}}
+@media(max-width:380px){.ocnav-logo{font-size:13px;}.ocnav-logo svg{width:22px;height:25px;}}
+</style>
+
+
+<nav class="ocnav">
+  <a href="index.html#home" class="ocnav-logo">
+    <svg viewBox="0 0 60 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="8,27 30,14 52,27" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <line x1="8" y1="27" x2="8" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
+      <line x1="52" y1="27" x2="52" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
+      <polyline points="8,36 8,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="52,36 52,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="17,39 17,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="43,39 43,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <path d="M30,18 L31.6,27.5 L41,30 L31.6,32.5 L30,42 L28.4,32.5 L19,30 L28.4,27.5 Z" fill="#0a0a0a"></path>
+    </svg>
+    OrionCodix
+  </a>
+  <div class="ocnav-links">
+    <a href="index.html#home" class="ocnav-link active">Home</a>
+    <a href="index.html#howitworks" class="ocnav-link">How it works</a>
+    <a href="index.html#whatyouget" class="ocnav-link">What you get</a>
+    <a href="index.html#ourworks" class="ocnav-link">Our Works</a>
+    <a href="index.html#footer" class="ocnav-link">Contact</a>
+  </div>
+  <div class="ocnav-right">
+    <a href="Startmyproject.html" class="ocnav-btn">
+      <div class="pi"><span class="pt">Start My Project</span><span class="pt">Start My Project</span></div>
+    </a>
+    <button class="ocnav-burger" id="ocBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="ocnav-drawer" id="ocDrawer">
+  <a href="index.html#home" class="active">Home</a>
+  <a href="index.html#howitworks">How it works</a>
+  <a href="index.html#whatyouget">What you get</a>
+  <a href="index.html#ourworks">Our Works</a>
+  <a href="index.html#footer">Contact</a>
+  <div class="ocnav-drawer-divider"></div>
+  <div class="ocnav-drawer-cta">
+    <a href="Startmyproject.html" class="ocnav-drawer-btn">Start My Project</a>
+  </div>
+</div>
+<script>
+var ocB=document.getElementById("ocBurger");
+var ocD=document.getElementById("ocDrawer");
+ocB.addEventListener("click",function(){
+  var isOpen=ocD.classList.contains("open");
+  ocD.classList.toggle("open");ocB.classList.toggle("open");
+  ocB.setAttribute("aria-label",isOpen?"Open menu":"Close menu");
+});
+ocD.querySelectorAll("a").forEach(function(link){
+  link.addEventListener("click",function(){
+    ocD.classList.remove("open");ocB.classList.remove("open");
+    ocB.setAttribute("aria-label","Open menu");
+  });
+});
+document.addEventListener("click",function(e){
+  if(ocD.classList.contains("open")&&!ocD.contains(e.target)&&!ocB.contains(e.target)){
+    ocD.classList.remove("open");ocB.classList.remove("open");
+    ocB.setAttribute("aria-label","Open menu");
+  }
+});
+</script>
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrionCodix — Navbar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Geist',-apple-system,sans-serif;}
+.ocnav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.09);box-sizing:border-box;}
+.ocnav-logo{transition:color 0.2s;}
+.ocnav-logo:hover{color:#F5C200 !important;}
+.ocnav-logo{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;letter-spacing:-0.01em;color:#0a0a0a;text-decoration:none;flex-shrink:0;}
+.ocnav-logo svg{width:26px;height:29px;flex-shrink:0;transition:stroke 0.2s;}
+.ocnav-logo:hover svg polyline,.ocnav-logo:hover svg line,.ocnav-logo:hover svg path{stroke:#F5C200 !important;fill:transparent;}
+.ocnav-logo:hover svg path[fill="#0a0a0a"]{fill:#F5C200 !important;stroke:none !important;}
+.ocnav-links{display:flex;align-items:center;gap:4px;}
+.ocnav-link{font-size:13.5px;color:#666;text-decoration:none;padding:6px 14px;border-radius:100px;transition:color 0.2s,background 0.2s;white-space:nowrap;}
+.ocnav-link:hover{color:#0a0a0a;background:#f5f5f5;}
+.ocnav-link.active{color:#0a0a0a;font-weight:500;}
+.ocnav-right{display:flex;align-items:center;gap:10px;}
+.ocnav-btn{display:inline-flex;align-items:flex-start;justify-content:center;overflow:hidden;height:42px;padding:0 22px;border-radius:100px;border:1px solid #0a0a0a;background:#0a0a0a;color:#fff;font-size:13.5px;font-weight:400;letter-spacing:-0.01em;cursor:pointer;text-decoration:none;transition:background 0.25s,border-color 0.25s;box-sizing:border-box;}
+.ocnav-btn:hover{background:#222;border-color:#222;}
+.ocnav-btn .pi{display:flex;flex-direction:column;transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);}
+.ocnav-btn:hover .pi{transform:translateY(-42px);}
+.ocnav-btn .pt{display:flex;align-items:center;justify-content:center;color:#fff;height:42px;white-space:nowrap;flex-shrink:0;}
+.ocnav-burger{width:42px;height:42px;border-radius:50%;border:1px solid rgba(0,0,0,0.22);background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;transition:border-color 0.25s;flex-shrink:0;}
+.ocnav-burger:hover{border-color:rgba(0,0,0,0.7);}
+.ocnav-burger span{display:block;width:14px;height:1.5px;background:#0a0a0a;border-radius:2px;transition:transform 0.3s,opacity 0.2s;}
+.ocnav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.ocnav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.ocnav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.ocnav-drawer{position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,0.09);padding:16px 20px 24px;display:flex;flex-direction:column;gap:4px;z-index:8999;transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1),opacity 0.25s;box-shadow:0 16px 48px rgba(0,0,0,0.08);box-sizing:border-box;}
+.ocnav-drawer.open{transform:translateY(0);opacity:1;pointer-events:all;}
+.ocnav-drawer a{display:flex;align-items:center;font-size:15px;color:rgba(0,0,0,0.55);text-decoration:none;padding:12px 16px;border-radius:12px;transition:background 0.2s,color 0.2s;font-weight:400;}
+.ocnav-drawer a:hover,.ocnav-drawer a.active{background:#f5f5f5;color:#0a0a0a;}
+.ocnav-drawer a.active{font-weight:500;}
+.ocnav-drawer-divider{height:1px;background:rgba(0,0,0,0.09);margin:8px 0;}
+.ocnav-drawer-cta{margin-top:4px;}
+.ocnav-drawer-cta .ocnav-btn{
+  width:100%;
+  height:46px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.ocnav-drawer-cta .ocnav-btn .pi{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);
+}
+.ocnav-drawer-cta .ocnav-btn .pt{
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ocnav-drawer-cta .ocnav-btn:hover .pi{transform:translateY(-46px);}
+.ocnav-drawer-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:46px;
+  border-radius:100px;
+  background:#0a0a0a;
+  color:#ffffff !important;
+  font-family:'Geist',-apple-system,sans-serif;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  letter-spacing:-0.01em;
+}
+.ocnav-drawer-btn:hover{background:#222;}
+@media(min-width:769px){.ocnav-drawer{display:none!important;}.ocnav-burger{display:none!important;}}
+@media(max-width:768px){.ocnav{padding:0 20px;}.ocnav-links{display:none!important;}.ocnav-right .ocnav-btn{display:none!important;}}
+@media(max-width:380px){.ocnav-logo{transition:color 0.2s;}
+.ocnav-logo:hover{color:#F5C200 !important;}
+.ocnav-logo{font-size:13px;}.ocnav-logo svg{width:22px;height:25px;}}
+</style>
+
+
+<nav class="ocnav">
+  <a href="index.html#home" class="ocnav-logo">
+    <svg viewBox="0 0 60 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="8,27 30,14 52,27" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <line x1="8" y1="27" x2="8" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
+      <line x1="52" y1="27" x2="52" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
+      <polyline points="8,36 8,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="52,36 52,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="17,39 17,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="43,39 43,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <path d="M30,18 L31.6,27.5 L41,30 L31.6,32.5 L30,42 L28.4,32.5 L19,30 L28.4,27.5 Z" fill="#0a0a0a"></path>
+    </svg>
+    OrionCodix
+  </a>
+  <div class="ocnav-links">
+    <a href="index.html#home" class="ocnav-link active">Home</a>
+    <a href="index.html#howitworks" class="ocnav-link">How it works</a>
+    <a href="index.html#whatyouget" class="ocnav-link">What you get</a>
+    <a href="index.html#ourworks" class="ocnav-link">Our Works</a>
+    <a href="index.html#footer" class="ocnav-link">Contact</a>
+  </div>
+  <div class="ocnav-right">
+    <a href="Startmyproject.html" class="ocnav-btn">
+      <div class="pi"><span class="pt">Start My Project</span><span class="pt">Start My Project</span></div>
+    </a>
+    <button class="ocnav-burger" id="ocBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="ocnav-drawer" id="ocDrawer">
+  <a href="index.html#home" class="active">Home</a>
+  <a href="index.html#howitworks">How it works</a>
+  <a href="index.html#whatyouget">What you get</a>
+  <a href="index.html#ourworks">Our Works</a>
+  <a href="index.html#footer">Contact</a>
+  <div class="ocnav-drawer-divider"></div>
+  <div class="ocnav-drawer-cta">
+    <a href="Startmyproject.html" class="ocnav-drawer-btn">Start My Project</a>
+  </div>
+</div>
+[JS_CODE_1]
+
+
+
+
+
+
+
+
+</div>
+
+<div id="custom-html-j">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start My Project — OrionCodix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fff;--black:#0a0a0a;--yellow:#F5C200;--yellow-dark:#D9AB00;--gray:#666;--border:rgba(0,0,0,0.09);--font:'Geist',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;}
+body{background:var(--bg);color:var(--black);font-family:var(--font);overflow-x:hidden;-webkit-font-smoothing:antialiased;cursor:none;min-height:100vh;}
+.oc-cur{position:fixed;width:8px;height:8px;background:#000;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s}
+.oc-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(0,0,0,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+body:has(a:hover) .oc-cur,body:has(button:hover) .oc-cur{width:5px;height:5px}
+body:has(a:hover) .oc-ring,body:has(button:hover) .oc-ring{width:48px;height:48px;border-color:rgba(0,0,0,.6)}
+
+/* PAGE */
+.smp-page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:80px 24px 60px;
+}
+
+.smp-wrap{
+  width:100%;
+  max-width:560px;
+}
+
+/* Back link */
+.smp-back{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;color:var(--gray);text-decoration:none;
+  margin-bottom:40px;
+  transition:color .2s;
+}
+.smp-back:hover{color:var(--black);}
+.smp-back svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;}
+
+/* Header */
+.smp-header{margin-bottom:40px;}
+.smp-tag{
+  display:inline-block;
+  font-size:11px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gray);margin-bottom:14px;
+}
+.smp-header h1{
+  font-size:clamp(28px,4vw,42px);
+  font-weight:700;letter-spacing:-.025em;
+  line-height:1.1;margin-bottom:10px;
+}
+.smp-header p{
+  font-size:15px;color:var(--gray);line-height:1.65;
+}
+
+/* Form */
+.smp-form{display:flex;flex-direction:column;gap:16px;}
+
+.smp-field{display:flex;flex-direction:column;gap:6px;}
+.smp-label{
+  font-size:12px;font-weight:600;
+  letter-spacing:.05em;text-transform:uppercase;
+  color:var(--black);opacity:.5;
+}
+.smp-input,.smp-textarea,.smp-select{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  font-family:var(--font);
+  font-size:15px;
+  color:var(--black);
+  background:#fff;
+  outline:none;
+  transition:border-color .25s, box-shadow .25s;
+  appearance:none;
+}
+.smp-input:focus,.smp-textarea:focus,.smp-select:focus{
+  border-color:var(--black);
+  box-shadow:0 0 0 3px rgba(0,0,0,.06);
+}
+.smp-textarea{resize:vertical;min-height:120px;line-height:1.6;}
+.smp-select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;}
+
+/* Row */
+.smp-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+
+/* Submit */
+.smp-submit{
+  display:flex;align-items:flex-start;justify-content:center;
+  overflow:hidden;
+  width:100%;height:52px;
+  border-radius:100px;
+  background:var(--black);color:#fff;
+  font-family:var(--font);font-size:15px;font-weight:500;
+  border:none;cursor:pointer;
+  margin-top:8px;
+  transition:background .25s;
+}
+.smp-submit:hover{background:#222;}
+.smp-submit .pi{display:flex;flex-direction:column;transition:transform .38s cubic-bezier(.16,1,.3,1);}
+.smp-submit:hover .pi{transform:translateY(-52px);}
+.smp-submit .pt{display:flex;align-items:center;justify-content:center;gap:8px;color:#fff;height:52px;white-space:nowrap;flex-shrink:0;}
+
+/* WhatsApp note */
+.smp-note{
+  display:flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--gray);
+  margin-top:4px;
+}
+.smp-note svg{width:16px;height:16px;flex-shrink:0;}
+
+/* MOBILE */
+@media(max-width:480px){
+  .smp-page{padding:70px 16px 48px;}
+  .smp-header h1{font-size:clamp(24px,7vw,32px);}
+  .smp-row{grid-template-columns:1fr;}
+  .smp-submit{height:48px;font-size:14px;}
+  .smp-submit .pt{height:48px;}
+  .smp-submit:hover .pi{transform:translateY(-48px);}
+}
+</style>
+
+
+<div class="oc-cur" id="cur"></div>
+<div class="oc-ring" id="ring"></div>
+
+<div class="smp-page">
+  <div class="smp-wrap">
+
+    <a href="index.html#home" class="smp-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Back to main
+    </a>
+
+    <div class="smp-header">
+      <span class="smp-tag">OrionCodix</span>
+      <h1>Let's Build Your<br>Website</h1>
+      <p>Fill in the form below — we'll send you a custom quote via WhatsApp within 24 hours.</p>
+    </div>
+
+    <form class="smp-form" id="smpForm">
+
+      <div class="smp-row">
+        <div class="smp-field">
+          <label class="smp-label">Your Name</label>
+          <input class="smp-input" type="text" id="fname" placeholder="John Smith" required="">
+        </div>
+        <div class="smp-field">
+          <label class="smp-label">Business Name</label>
+          <input class="smp-input" type="text" id="bname" placeholder="My Business">
+        </div>
+      </div>
+
+      <div class="smp-field">
+        <label class="smp-label">Type of Business</label>
+        <select class="smp-select" id="btype" required="">
+          <option value="" disabled="" selected="">Select your industry</option>
+          <option>Restaurant / Café</option>
+          <option>Beauty / Wellness</option>
+          <option>Cleaning Service</option>
+          <option>Construction / Renovation</option>
+          <option>Medical / Health</option>
+          <option>Legal / Finance</option>
+          <option>Real Estate</option>
+          <option>E-commerce / Retail</option>
+          <option>Coaching / Consulting</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="smp-field">
+        <label class="smp-label">What do you need?</label>
+        <select class="smp-select" id="need" required="">
+          <option value="" disabled="" selected="">Select what you need</option>
+          <option>Brand new website</option>
+          <option>Redesign existing website</option>
+          <option>Landing page only</option>
+          <option>Website + SEO setup</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+
+      <div class="smp-field">
+        <label class="smp-label">Tell us about your project</label>
+        <textarea class="smp-textarea" id="msg" placeholder="Briefly describe your business and what you want the website to do for you..."></textarea>
+      </div>
+
+      <div class="smp-field">
+        <label class="smp-label">Your WhatsApp or Email</label>
+        <input class="smp-input" type="text" id="contact" placeholder="+1 234 567 8900 or email@example.com" required="">
+      </div>
+
+      <button type="submit" class="smp-submit">
+        <div class="pi">
+          <span class="pt">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.526 5.858L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.493-5.188-1.357l-.372-.22-3.862 1.007 1.03-3.752-.242-.386A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+            Send via WhatsApp
+          </span>
+          <span class="pt">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.526 5.858L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.493-5.188-1.357l-.372-.22-3.862 1.007 1.03-3.752-.242-.386A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+            Send via WhatsApp
+          </span>
+        </div>
+      </button>
+
+      <p class="smp-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>
+        Your message will open in WhatsApp — we reply within 24 hours.
+      </p>
+
+    </form>
+  </div>
+</div>
+
+<script>
+var cur=document.getElementById('cur'),ring=document.getElementById('ring');
+var mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;});
+(function tick(){
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+  rx+=(mx-rx)*.11;ry+=(my-ry)*.11;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(tick);
+})();
+
+document.getElementById('smpForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var name = document.getElementById('fname').value.trim();
+  var bname = document.getElementById('bname').value.trim();
+  var btype = document.getElementById('btype').value;
+  var need = document.getElementById('need').value;
+  var msg = document.getElementById('msg').value.trim();
+  var contact = document.getElementById('contact').value.trim();
+
+  var text = "Hi! I'd like to start a website project with OrionCodix.\n\n"
+    + "👤 Name: " + name + "\n"
+    + (bname ? "🏢 Business: " + bname + "\n" : "")
+    + "📂 Industry: " + btype + "\n"
+    + "🎯 Need: " + need + "\n"
+    + (msg ? "📝 Details: " + msg + "\n" : "")
+    + "📞 Contact me: " + contact;
+
+  var phone = "13235233175";
+  var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
+  window.open(url, "_blank");
+});
+</script>
+
+</div>
+
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/result-0-128x128-1.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Private</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/popup-overlay-plugin/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=fz2DHx"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=fz2DHx" type="text/css">
+
+  
+  
+  
+
+</head>
+<body>
+  
+  <div id="custom-html-f">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrionCodix — Navbar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Geist',-apple-system,sans-serif;}
+.ocnav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.09);box-sizing:border-box;}
+.ocnav-logo{transition:color 0.2s;}
+.ocnav-logo:hover{color:#F5C200 !important;}
+.ocnav-logo{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;letter-spacing:-0.01em;color:#0a0a0a;text-decoration:none;flex-shrink:0;}
+.ocnav-logo svg{width:26px;height:29px;flex-shrink:0;transition:stroke 0.2s;}
+.ocnav-logo:hover svg polyline,.ocnav-logo:hover svg line,.ocnav-logo:hover svg path{stroke:#F5C200 !important;fill:transparent;}
+.ocnav-logo:hover svg path[fill="#0a0a0a"]{fill:#F5C200 !important;stroke:none !important;}
+.ocnav-links{display:flex;align-items:center;gap:4px;}
+.ocnav-link{font-size:13.5px;color:#666;text-decoration:none;padding:6px 14px;border-radius:100px;transition:color 0.2s,background 0.2s;white-space:nowrap;}
+.ocnav-link:hover{color:#0a0a0a;background:#f5f5f5;}
+.ocnav-link.active{color:#0a0a0a;font-weight:500;}
+.ocnav-right{display:flex;align-items:center;gap:10px;}
+.ocnav-btn{display:inline-flex;align-items:flex-start;justify-content:center;overflow:hidden;height:42px;padding:0 22px;border-radius:100px;border:1px solid #0a0a0a;background:#0a0a0a;color:#fff;font-size:13.5px;font-weight:400;letter-spacing:-0.01em;cursor:pointer;text-decoration:none;transition:background 0.25s,border-color 0.25s;box-sizing:border-box;}
+.ocnav-btn:hover{background:#222;border-color:#222;}
+.ocnav-btn .pi{display:flex;flex-direction:column;transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);}
+.ocnav-btn:hover .pi{transform:translateY(-42px);}
+.ocnav-btn .pt{display:flex;align-items:center;justify-content:center;color:#fff;height:42px;white-space:nowrap;flex-shrink:0;}
+.ocnav-burger{width:42px;height:42px;border-radius:50%;border:1px solid rgba(0,0,0,0.22);background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;transition:border-color 0.25s;flex-shrink:0;}
+.ocnav-burger:hover{border-color:rgba(0,0,0,0.7);}
+.ocnav-burger span{display:block;width:14px;height:1.5px;background:#0a0a0a;border-radius:2px;transition:transform 0.3s,opacity 0.2s;}
+.ocnav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.ocnav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.ocnav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.ocnav-drawer{position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,0.09);padding:16px 20px 24px;display:flex;flex-direction:column;gap:4px;z-index:8999;transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1),opacity 0.25s;box-shadow:0 16px 48px rgba(0,0,0,0.08);box-sizing:border-box;}
+.ocnav-drawer.open{transform:translateY(0);opacity:1;pointer-events:all;}
+.ocnav-drawer a{display:flex;align-items:center;font-size:15px;color:rgba(0,0,0,0.55);text-decoration:none;padding:12px 16px;border-radius:12px;transition:background 0.2s,color 0.2s;font-weight:400;}
+.ocnav-drawer a:hover,.ocnav-drawer a.active{background:#f5f5f5;color:#0a0a0a;}
+.ocnav-drawer a.active{font-weight:500;}
+.ocnav-drawer-divider{height:1px;background:rgba(0,0,0,0.09);margin:8px 0;}
+.ocnav-drawer-cta{margin-top:4px;}
+.ocnav-drawer-cta .ocnav-btn{
+  width:100%;
+  height:46px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.ocnav-drawer-cta .ocnav-btn .pi{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);
+}
+.ocnav-drawer-cta .ocnav-btn .pt{
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ocnav-drawer-cta .ocnav-btn:hover .pi{transform:translateY(-46px);}
+.ocnav-drawer-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:46px;
+  border-radius:100px;
+  background:#0a0a0a;
+  color:#ffffff !important;
+  font-family:'Geist',-apple-system,sans-serif;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  letter-spacing:-0.01em;
+}
+.ocnav-drawer-btn:hover{background:#222;}
+@media(min-width:769px){.ocnav-drawer{display:none!important;}.ocnav-burger{display:none!important;}}
+@media(max-width:768px){.ocnav{padding:0 20px;}.ocnav-links{display:none!important;}.ocnav-right .ocnav-btn{display:none!important;}}
+@media(max-width:380px){.ocnav-logo{transition:color 0.2s;}
+.ocnav-logo:hover{color:#F5C200 !important;}
+.ocnav-logo{font-size:13px;}.ocnav-logo svg{width:22px;height:25px;}}
+</style>
+
+
+<nav class="ocnav">
+  <a href="index.html#home" class="ocnav-logo">
+    <svg viewBox="0 0 60 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="8,27 30,14 52,27" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <line x1="8" y1="27" x2="8" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
+      <line x1="52" y1="27" x2="52" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
+      <polyline points="8,36 8,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="52,36 52,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="17,39 17,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <polyline points="43,39 43,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
+      <path d="M30,18 L31.6,27.5 L41,30 L31.6,32.5 L30,42 L28.4,32.5 L19,30 L28.4,27.5 Z" fill="#0a0a0a"></path>
+    </svg>
+    OrionCodix
+  </a>
+  <div class="ocnav-links">
+    <a href="index.html#home" class="ocnav-link active">Home</a>
+    <a href="index.html#howitworks" class="ocnav-link">How it works</a>
+    <a href="index.html#whatyouget" class="ocnav-link">What you get</a>
+    <a href="index.html#ourworks" class="ocnav-link">Our Works</a>
+    <a href="index.html#footer" class="ocnav-link">Contact</a>
+  </div>
+  <div class="ocnav-right">
+    <a href="Startmyproject.html" class="ocnav-btn">
+      <div class="pi"><span class="pt">Start My Project</span><span class="pt">Start My Project</span></div>
+    </a>
+    <button class="ocnav-burger" id="ocBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="ocnav-drawer" id="ocDrawer">
+  <a href="index.html#home" class="active">Home</a>
+  <a href="index.html#howitworks">How it works</a>
+  <a href="index.html#whatyouget">What you get</a>
+  <a href="index.html#ourworks">Our Works</a>
+  <a href="index.html#footer">Contact</a>
+  <div class="ocnav-drawer-divider"></div>
+  <div class="ocnav-drawer-cta">
+    <a href="Startmyproject.html" class="ocnav-drawer-btn">Start My Project</a>
+  </div>
+</div>
+<script>
+var ocB=document.getElementById("ocBurger");
+var ocD=document.getElementById("ocDrawer");
+ocB.addEventListener("click",function(){
+  var isOpen=ocD.classList.contains("open");
+  ocD.classList.toggle("open");ocB.classList.toggle("open");
+  ocB.setAttribute("aria-label",isOpen?"Open menu":"Close menu");
+});
+ocD.querySelectorAll("a").forEach(function(link){
+  link.addEventListener("click",function(){
+    ocD.classList.remove("open");ocB.classList.remove("open");
+    ocB.setAttribute("aria-label","Open menu");
+  });
+});
+document.addEventListener("click",function(e){
+  if(ocD.classList.contains("open")&&!ocD.contains(e.target)&&!ocB.contains(e.target)){
+    ocD.classList.remove("open");ocB.classList.remove("open");
+    ocB.setAttribute("aria-label","Open menu");
+  }
+});
+</script>
+</div>
+
+<div id="custom-html-g">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal — OrionCodix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0a0a0a;
+  --gray:#555;
+  --gray2:#999;
+  --border:rgba(0,0,0,0.09);
+  --font:'Geist',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+}
+body{font-family:var(--font);color:var(--black);background:#fff;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 60px;height:60px;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-size:15px;font-weight:700;color:var(--black);text-decoration:none;}
+.nav-back{font-size:13px;color:var(--gray2);text-decoration:none;transition:color .2s;}
+.nav-back:hover{color:var(--black)}
+
+/* TABS */
+.tabs-wrap{
+  position:sticky;top:60px;z-index:99;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 60px;
+  display:flex;gap:0;
+}
+.tab-btn{
+  padding:16px 24px;
+  font-size:14px;font-weight:500;
+  color:var(--gray2);
+  background:none;border:none;cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+  font-family:var(--font);
+  white-space:nowrap;
+}
+.tab-btn.active{color:var(--black);border-bottom-color:var(--black);}
+.tab-btn:hover{color:var(--black)}
+
+/* CONTENT */
+.doc{display:none;max-width:760px;margin:0 auto;padding:64px 60px 120px;}
+.doc.active{display:block}
+
+.doc-hero{margin-bottom:48px;}
+.doc-tag{
+  display:inline-block;padding:4px 12px;border-radius:100px;
+  border:1px solid var(--border);background:rgba(0,0,0,.03);
+  font-size:11px;color:var(--gray2);letter-spacing:.07em;
+  text-transform:uppercase;margin-bottom:16px;
+}
+.doc-title{
+  font-size:clamp(28px,4vw,42px);
+  font-weight:800;letter-spacing:-.03em;
+  line-height:1.08;margin-bottom:12px;
+}
+.doc-meta{font-size:13px;color:var(--gray2);}
+
+.doc h2{
+  font-size:18px;font-weight:700;
+  letter-spacing:-.01em;
+  margin:40px 0 12px;
+  padding-top:40px;
+  border-top:1px solid var(--border);
+}
+.doc h2:first-of-type{border-top:none;padding-top:0;}
+.doc p{
+  font-size:15px;color:var(--gray);
+  line-height:1.75;margin-bottom:14px;
+}
+.doc ul,.doc ol{
+  padding-left:22px;margin-bottom:14px;
+}
+.doc li{
+  font-size:15px;color:var(--gray);
+  line-height:1.7;margin-bottom:6px;
+}
+.doc strong{color:var(--black);font-weight:600;}
+.doc a{color:var(--black);text-decoration:underline;text-underline-offset:3px;}
+
+.highlight-box{
+  background:#f5f5f5;border-radius:14px;
+  padding:20px 24px;margin:20px 0;
+  border:1px solid var(--border);
+}
+.highlight-box p{margin:0;font-size:14px;}
+
+@media(max-width:768px){
+  nav,.tabs-wrap{padding:0 20px;}
+  .doc{padding:40px 20px 80px;}
+  .tab-btn{padding:14px 14px;font-size:13px;}
+}
+</style>
+
+
+
+<nav>
+  <a href="index.html" class="nav-logo">OrionCodix</a>
+  <a href="index.html" class="nav-back">← Back to site</a>
+</nav>
+
+<div class="tabs-wrap">
+  <button class="tab-btn active" onclick="showTab('privacy')">Privacy Policy</button>
+  <button class="tab-btn" onclick="showTab('terms')">Terms of Service</button>
+  <button class="tab-btn" onclick="showTab('cookies')">Cookie Policy</button>
+</div>
+
+<!-- ══════════════════════════════════
+     PRIVACY POLICY
+══════════════════════════════════ -->
+<div class="doc active" id="privacy">
+  <div class="doc-hero">
+    <span class="doc-tag">Legal</span>
+    <h1 class="doc-title">Privacy Policy</h1>
+    <p class="doc-meta">ECO IDEA LLC · OrionCodix · Last updated: January 1, 2026</p>
+  </div>
+
+  <div class="highlight-box">
+    <p>Your privacy matters to us. This policy explains what data we collect, how we use it, and your rights as a user.</p>
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>OrionCodix is a web development brand operated by <strong>ECO IDEA LLC</strong>, a registered company based in Los Angeles, California, USA. We provide professional website development, SEO, and digital branding services.</p>
+  <p>Contact: <a href="mailto:info.ecoideahub@gmail.com">info.ecoideahub@gmail.com</a> · <a href="tel:+13235233175">+1 (323) 523-31-75</a></p>
+
+  <h2>2. Information We Collect</h2>
+  <p>We may collect the following types of information:</p>
+  <ul>
+    <li><strong>Contact information</strong> — name, email address, phone number provided via contact forms or email.</li>
+    <li><strong>Project details</strong> — information you share when describing your project needs.</li>
+    <li><strong>Usage data</strong> — pages visited, time spent, browser type, device type (via analytics tools).</li>
+    <li><strong>Cookies</strong> — small files stored in your browser to improve your experience (see Cookie Policy).</li>
+  </ul>
+
+  <h2>3. How We Use Your Information</h2>
+  <ul>
+    <li>To respond to your inquiries and provide our services</li>
+    <li>To send project updates and communications</li>
+    <li>To improve our website and services</li>
+    <li>To comply with legal obligations</li>
+  </ul>
+  <p>We do <strong>not</strong> sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+  <h2>4. Data Storage &amp; Security</h2>
+  <p>Your data is stored securely. We use industry-standard encryption and access controls to protect your information. We retain your data only as long as necessary to fulfill the purposes described in this policy.</p>
+
+  <h2>5. Third-Party Services</h2>
+  <p>We may use third-party tools including Google Analytics, Google Fonts, and email services. These services have their own privacy policies and may collect data independently.</p>
+
+  <h2>6. Your Rights</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Access the personal data we hold about you</li>
+    <li>Request correction or deletion of your data</li>
+    <li>Withdraw consent at any time</li>
+    <li>Lodge a complaint with a data protection authority</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:info.ecoideahub@gmail.com">info.ecoideahub@gmail.com</a>.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>Our services are not directed to individuals under the age of 16. We do not knowingly collect personal data from children.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this page.</p>
+</div>
+
+<!-- ══════════════════════════════════
+     TERMS OF SERVICE
+══════════════════════════════════ -->
+<div class="doc" id="terms">
+  <div class="doc-hero">
+    <span class="doc-tag">Legal</span>
+    <h1 class="doc-title">Terms of Service</h1>
+    <p class="doc-meta">ECO IDEA LLC · OrionCodix · Last updated: January 1, 2026</p>
+  </div>
+
+  <div class="highlight-box">
+    <p>By using our services, you agree to these terms. Please read them carefully before starting a project with us.</p>
+  </div>
+
+  <h2>1. Agreement</h2>
+  <p>These Terms of Service ("Terms") govern your use of OrionCodix services provided by <strong>ECO IDEA LLC</strong>. By engaging our services, you agree to be bound by these Terms.</p>
+
+  <h2>2. Services</h2>
+  <p>OrionCodix provides web development, design, SEO setup, and related digital services. The scope, timeline, and pricing of each project are agreed upon individually before work begins.</p>
+
+  <h2>3. Payment Terms</h2>
+  <ul>
+    <li>Projects are quoted individually based on scope and requirements.</li>
+    <li>A deposit may be required before project commencement.</li>
+    <li>Final payment is due upon project completion and before final delivery.</li>
+    <li>All prices are in USD unless otherwise agreed.</li>
+  </ul>
+
+  <h2>4. Project Delivery</h2>
+  <p>We aim to deliver projects within the agreed timeframe. Delays caused by the client (late feedback, missing content) may extend the delivery schedule. We will communicate any changes promptly.</p>
+
+  <h2>5. Revisions</h2>
+  <p>Each project includes a set number of revision rounds as agreed in the project proposal. Additional revisions beyond the agreed scope may incur extra charges.</p>
+
+  <h2>6. Intellectual Property</h2>
+  <p>Upon full payment, the client receives ownership of the final deliverables. OrionCodix retains the right to showcase completed work in our portfolio unless otherwise agreed in writing.</p>
+  <p>Third-party assets (fonts, stock images, plugins) remain subject to their respective licenses.</p>
+
+  <h2>7. Client Responsibilities</h2>
+  <ul>
+    <li>Provide accurate project requirements and content in a timely manner</li>
+    <li>Ensure you have rights to any materials provided to us</li>
+    <li>Review and approve deliverables within agreed timeframes</li>
+  </ul>
+
+  <h2>8. Limitation of Liability</h2>
+  <p>ECO IDEA LLC shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services. Our total liability shall not exceed the amount paid for the specific project.</p>
+
+  <h2>9. Termination</h2>
+  <p>Either party may terminate a project with written notice. Work completed up to the termination date will be invoiced accordingly. Deposits are non-refundable unless otherwise agreed.</p>
+
+  <h2>10. Governing Law</h2>
+  <p>These Terms are governed by the laws of the State of California, USA. Any disputes shall be resolved in the courts of Los Angeles County, California.</p>
+
+  <h2>11. Contact</h2>
+  <p>For any questions regarding these Terms, contact us at <a href="mailto:info.ecoideahub@gmail.com">info.ecoideahub@gmail.com</a> or call <a href="tel:+13235233175">+1 (323) 523-31-75</a>.</p>
+</div>
+
+<!-- ══════════════════════════════════
+     COOKIE POLICY
+══════════════════════════════════ -->
+<div class="doc" id="cookies">
+  <div class="doc-hero">
+    <span class="doc-tag">Legal</span>
+    <h1 class="doc-title">Cookie Policy</h1>
+    <p class="doc-meta">ECO IDEA LLC · OrionCodix · Last updated: January 1, 2026</p>
+  </div>
+
+  <div class="highlight-box">
+    <p>This policy explains how OrionCodix uses cookies and similar technologies on our website.</p>
+  </div>
+
+  <h2>1. What Are Cookies</h2>
+  <p>Cookies are small text files stored on your device when you visit a website. They help websites remember your preferences and improve your browsing experience.</p>
+
+  <h2>2. Types of Cookies We Use</h2>
+
+  <p><strong>Essential Cookies</strong></p>
+  <p>These cookies are necessary for the website to function properly. They cannot be disabled. They include cookies that remember your preferences and session data.</p>
+
+  <p><strong>Analytics Cookies</strong></p>
+  <p>We use Google Analytics to understand how visitors interact with our website. This helps us improve our content and user experience. The data collected is anonymous and aggregated.</p>
+
+  <p><strong>Functional Cookies</strong></p>
+  <p>These cookies remember your choices (such as language or region) to provide a more personalized experience.</p>
+
+  <h2>3. Third-Party Cookies</h2>
+  <p>Some cookies are placed by third-party services that appear on our pages, including:</p>
+  <ul>
+    <li><strong>Google Analytics</strong> — website traffic analysis</li>
+    <li><strong>Google Fonts</strong> — typography rendering</li>
+  </ul>
+  <p>These third parties have their own cookie policies which we encourage you to review.</p>
+
+  <h2>4. Managing Cookies</h2>
+  <p>You can control and manage cookies through your browser settings. Most browsers allow you to:</p>
+  <ul>
+    <li>View and delete existing cookies</li>
+    <li>Block cookies from specific websites</li>
+    <li>Block all third-party cookies</li>
+    <li>Clear all cookies when closing the browser</li>
+  </ul>
+  <p>Please note that disabling certain cookies may affect the functionality of our website.</p>
+
+  <h2>5. Your Consent</h2>
+  <p>By continuing to use our website, you consent to the use of cookies as described in this policy. You may withdraw your consent at any time by adjusting your browser settings.</p>
+
+  <h2>6. Updates</h2>
+  <p>We may update this Cookie Policy periodically. Changes will be reflected by updating the date at the top of this page.</p>
+
+  <h2>7. Contact</h2>
+  <p>If you have questions about our use of cookies, please contact us at <a href="mailto:info.ecoideahub@gmail.com">info.ecoideahub@gmail.com</a>.</p>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.doc').forEach(function(d){ d.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Open tab from URL hash
+var hash = window.location.hash.replace('#','');
+if(hash && document.getElementById(hash)){
+  document.querySelectorAll('.doc').forEach(function(d){ d.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById(hash).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(function(b){
+    if(b.getAttribute('onclick').includes(hash)) b.classList.add('active');
+  });
+}
+</script>
+
+</div>
+
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  
+
+</body>
+</html>
