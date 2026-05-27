@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=JQe6he"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=JQe6he" type="text/css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=XgxgkU"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=XgxgkU" type="text/css">
 
   
   
@@ -26,99 +26,42 @@
 <body>
   
   <div id="custom-html-1">
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OrionCodix — Navbar</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Geist',-apple-system,sans-serif;}
-.ocnav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.09);box-sizing:border-box;}
-.ocnav-logo{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;letter-spacing:-0.01em;color:#0a0a0a;text-decoration:none;flex-shrink:0;}
-.ocnav-logo svg{width:26px;height:29px;flex-shrink:0;}
+.ocnav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.09);box-sizing:border-box;font-family:'Geist',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;}
+.ocnav-logo{display:flex;align-items:center;gap:4px;transition:opacity .2s;font-size:15px;font-weight:600;letter-spacing:-0.01em;color:#0a0a0a;text-decoration:none;flex-shrink:0;}
+.ocnav-logo img{width:48px;height:48px;object-fit:contain;flex-shrink:0;}
+.ocnav-logo:hover{color:#FF6B00 !important;}
 .ocnav-links{display:flex;align-items:center;gap:4px;}
-.ocnav-link{font-size:13.5px;color:#666;text-decoration:none;padding:6px 14px;border-radius:100px;transition:color 0.2s,background 0.2s;white-space:nowrap;}
-.ocnav-link:hover{color:#0a0a0a;background:#f5f5f5;}
-.ocnav-link.active{color:#0a0a0a;font-weight:500;}
+.ocnav-link{font-size:13.5px;color:#666;text-decoration:none;padding:6px 14px;border-radius:100px;transition:color 0.2s,background 0.2s;white-space:nowrap;font-family:'Geist',-apple-system,sans-serif;}
+.ocnav-link:hover,.ocnav-link.active{color:#0a0a0a;background:rgba(0,0,0,0.05);}
 .ocnav-right{display:flex;align-items:center;gap:10px;}
-.ocnav-btn{display:inline-flex;align-items:flex-start;justify-content:center;overflow:hidden;height:42px;padding:0 22px;border-radius:100px;border:1px solid #0a0a0a;background:#0a0a0a;color:#fff;font-size:13.5px;font-weight:400;letter-spacing:-0.01em;cursor:pointer;text-decoration:none;transition:background 0.25s,border-color 0.25s;box-sizing:border-box;}
-.ocnav-btn:hover{background:#222;border-color:#222;}
+.ocnav-btn{display:inline-flex;align-items:flex-start;justify-content:center;overflow:hidden;height:38px;padding:0 20px;border-radius:100px;background:#0a0a0a;font-family:'Geist',-apple-system,sans-serif;font-size:13px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:background 0.25s;white-space:nowrap;}
+.ocnav-btn:hover{background:#333;}
 .ocnav-btn .pi{display:flex;flex-direction:column;transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);}
-.ocnav-btn:hover .pi{transform:translateY(-42px);}
-.ocnav-btn .pt{display:flex;align-items:center;justify-content:center;color:#fff;height:42px;white-space:nowrap;flex-shrink:0;}
-.ocnav-burger{width:42px;height:42px;border-radius:50%;border:1px solid rgba(0,0,0,0.22);background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;transition:border-color 0.25s;flex-shrink:0;}
-.ocnav-burger:hover{border-color:rgba(0,0,0,0.7);}
-.ocnav-burger span{display:block;width:14px;height:1.5px;background:#0a0a0a;border-radius:2px;transition:transform 0.3s,opacity 0.2s;}
-.ocnav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
-.ocnav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
-.ocnav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-.ocnav-drawer{position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,0.09);padding:16px 20px 24px;display:flex;flex-direction:column;gap:4px;z-index:8999;transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1),opacity 0.25s;box-shadow:0 16px 48px rgba(0,0,0,0.08);box-sizing:border-box;}
-.ocnav-drawer.open{transform:translateY(0);opacity:1;pointer-events:all;}
-.ocnav-drawer a{display:flex;align-items:center;font-size:15px;color:rgba(0,0,0,0.55);text-decoration:none;padding:12px 16px;border-radius:12px;transition:background 0.2s,color 0.2s;font-weight:400;}
-.ocnav-drawer a:hover,.ocnav-drawer a.active{background:#f5f5f5;color:#0a0a0a;}
-.ocnav-drawer a.active{font-weight:500;}
-.ocnav-drawer-divider{height:1px;background:rgba(0,0,0,0.09);margin:8px 0;}
+.ocnav-btn:hover .pi{transform:translateY(-38px);}
+.ocnav-btn .pt{display:flex;align-items:center;justify-content:center;color:#fff;height:38px;white-space:nowrap;flex-shrink:0;}
+.ocnav-burger{width:38px;height:38px;border-radius:50%;border:1px solid rgba(0,0,0,0.18);background:transparent;display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;transition:border-color 0.25s;padding:0;}
+.ocnav-burger:hover{border-color:rgba(0,0,0,0.5);}
+.ocnav-burger span{display:block;width:14px;height:1px;background:#0a0a0a;transition:transform 0.3s,opacity 0.3s;}
+.ocnav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.ocnav-burger.open span:nth-child(2){opacity:0;}
+.ocnav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.ocnav-drawer{position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.09);padding:16px 24px 24px;display:none;flex-direction:column;gap:4px;z-index:8999;font-family:'Geist',-apple-system,sans-serif;}
+.ocnav-drawer.open{display:flex;}
+.ocnav-drawer a{font-size:15px;color:#444;text-decoration:none;padding:10px 14px;border-radius:12px;transition:background 0.2s,color 0.2s;}
+.ocnav-drawer a:hover,.ocnav-drawer a.active{background:rgba(0,0,0,0.05);color:#0a0a0a;}
+.ocnav-drawer-divider{height:1px;background:rgba(0,0,0,0.08);margin:8px 0;}
 .ocnav-drawer-cta{margin-top:4px;}
-.ocnav-drawer-cta .ocnav-btn{
-  width:100%;
-  height:46px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
+@media(max-width:768px){
+  .ocnav{padding:0 20px;}
+  .ocnav-links{display:none;}
+  .ocnav-burger{display:flex;}
 }
-.ocnav-drawer-cta .ocnav-btn .pi{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);
-}
-.ocnav-drawer-cta .ocnav-btn .pt{
-  height:46px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.ocnav-drawer-cta .ocnav-btn:hover .pi{transform:translateY(-46px);}
-.ocnav-drawer-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  height:46px;
-  border-radius:100px;
-  background:#0a0a0a;
-  color:#ffffff !important;
-  font-family:'Geist',-apple-system,sans-serif;
-  font-size:14px;
-  font-weight:500;
-  text-decoration:none;
-  letter-spacing:-0.01em;
-}
-.ocnav-drawer-btn:hover{background:#222;}
-@media(min-width:769px){.ocnav-drawer{display:none!important;}.ocnav-burger{display:none!important;}}
-@media(max-width:768px){.ocnav{padding:0 20px;}.ocnav-links{display:none!important;}.ocnav-right .ocnav-btn{display:none!important;}}
-@media(max-width:380px){.ocnav-logo{font-size:13px;}.ocnav-logo svg{width:22px;height:25px;}}
 </style>
-
 
 <nav class="ocnav">
   <a href="index.html#home" class="ocnav-logo">
-    <svg viewBox="0 0 60 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polyline points="8,27 30,14 52,27" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <line x1="8" y1="27" x2="8" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
-      <line x1="52" y1="27" x2="52" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
-      <polyline points="8,36 8,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <polyline points="52,36 52,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <polyline points="17,39 17,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <polyline points="43,39 43,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <path d="M30,18 L31.6,27.5 L41,30 L31.6,32.5 L30,42 L28.4,32.5 L19,30 L28.4,27.5 Z" fill="#0a0a0a"></path>
-    </svg>
+    <img src="data:image/png;base64,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" alt="OrionCodix logo">
     OrionCodix
   </a>
   <div class="ocnav-links">
@@ -137,6 +80,7 @@ body{font-family:'Geist',-apple-system,sans-serif;}
     </button>
   </div>
 </nav>
+
 <div class="ocnav-drawer" id="ocDrawer">
   <a href="index.html#home" class="active">Home</a>
   <a href="index.html#howitworks">How it works</a>
@@ -145,9 +89,12 @@ body{font-family:'Geist',-apple-system,sans-serif;}
   <a href="index.html#footer">Contact</a>
   <div class="ocnav-drawer-divider"></div>
   <div class="ocnav-drawer-cta">
-    <a href="Startmyproject.html" class="ocnav-drawer-btn">Start My Project</a>
+    <a href="Startmyproject.html" class="ocnav-btn">
+      <div class="pi"><span class="pt">Start My Project</span><span class="pt">Start My Project</span></div>
+    </a>
   </div>
 </div>
+
 <script>
 var ocB=document.getElementById("ocBurger");
 var ocD=document.getElementById("ocDrawer");
@@ -169,137 +116,6 @@ document.addEventListener("click",function(e){
   }
 });
 </script>
-
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OrionCodix — Navbar</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Geist',-apple-system,sans-serif;}
-.ocnav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.09);box-sizing:border-box;}
-.ocnav-logo{transition:color 0.2s;}
-.ocnav-logo:hover{color:#F5C200 !important;}
-.ocnav-logo{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;letter-spacing:-0.01em;color:#0a0a0a;text-decoration:none;flex-shrink:0;}
-.ocnav-logo svg{width:26px;height:29px;flex-shrink:0;transition:stroke 0.2s;}
-.ocnav-logo:hover svg polyline,.ocnav-logo:hover svg line,.ocnav-logo:hover svg path{stroke:#F5C200 !important;fill:transparent;}
-.ocnav-logo:hover svg path[fill="#0a0a0a"]{fill:#F5C200 !important;stroke:none !important;}
-.ocnav-links{display:flex;align-items:center;gap:4px;}
-.ocnav-link{font-size:13.5px;color:#666;text-decoration:none;padding:6px 14px;border-radius:100px;transition:color 0.2s,background 0.2s;white-space:nowrap;}
-.ocnav-link:hover{color:#0a0a0a;background:#f5f5f5;}
-.ocnav-link.active{color:#0a0a0a;font-weight:500;}
-.ocnav-right{display:flex;align-items:center;gap:10px;}
-.ocnav-btn{display:inline-flex;align-items:flex-start;justify-content:center;overflow:hidden;height:42px;padding:0 22px;border-radius:100px;border:1px solid #0a0a0a;background:#0a0a0a;color:#fff;font-size:13.5px;font-weight:400;letter-spacing:-0.01em;cursor:pointer;text-decoration:none;transition:background 0.25s,border-color 0.25s;box-sizing:border-box;}
-.ocnav-btn:hover{background:#222;border-color:#222;}
-.ocnav-btn .pi{display:flex;flex-direction:column;transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);}
-.ocnav-btn:hover .pi{transform:translateY(-42px);}
-.ocnav-btn .pt{display:flex;align-items:center;justify-content:center;color:#fff;height:42px;white-space:nowrap;flex-shrink:0;}
-.ocnav-burger{width:42px;height:42px;border-radius:50%;border:1px solid rgba(0,0,0,0.22);background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;transition:border-color 0.25s;flex-shrink:0;}
-.ocnav-burger:hover{border-color:rgba(0,0,0,0.7);}
-.ocnav-burger span{display:block;width:14px;height:1.5px;background:#0a0a0a;border-radius:2px;transition:transform 0.3s,opacity 0.2s;}
-.ocnav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
-.ocnav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
-.ocnav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-.ocnav-drawer{position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,0.09);padding:16px 20px 24px;display:flex;flex-direction:column;gap:4px;z-index:8999;transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1),opacity 0.25s;box-shadow:0 16px 48px rgba(0,0,0,0.08);box-sizing:border-box;}
-.ocnav-drawer.open{transform:translateY(0);opacity:1;pointer-events:all;}
-.ocnav-drawer a{display:flex;align-items:center;font-size:15px;color:rgba(0,0,0,0.55);text-decoration:none;padding:12px 16px;border-radius:12px;transition:background 0.2s,color 0.2s;font-weight:400;}
-.ocnav-drawer a:hover,.ocnav-drawer a.active{background:#f5f5f5;color:#0a0a0a;}
-.ocnav-drawer a.active{font-weight:500;}
-.ocnav-drawer-divider{height:1px;background:rgba(0,0,0,0.09);margin:8px 0;}
-.ocnav-drawer-cta{margin-top:4px;}
-.ocnav-drawer-cta .ocnav-btn{
-  width:100%;
-  height:46px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-.ocnav-drawer-cta .ocnav-btn .pi{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  transition:transform 0.38s cubic-bezier(0.16,1,0.3,1);
-}
-.ocnav-drawer-cta .ocnav-btn .pt{
-  height:46px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.ocnav-drawer-cta .ocnav-btn:hover .pi{transform:translateY(-46px);}
-.ocnav-drawer-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  height:46px;
-  border-radius:100px;
-  background:#0a0a0a;
-  color:#ffffff !important;
-  font-family:'Geist',-apple-system,sans-serif;
-  font-size:14px;
-  font-weight:500;
-  text-decoration:none;
-  letter-spacing:-0.01em;
-}
-.ocnav-drawer-btn:hover{background:#222;}
-@media(min-width:769px){.ocnav-drawer{display:none!important;}.ocnav-burger{display:none!important;}}
-@media(max-width:768px){.ocnav{padding:0 20px;}.ocnav-links{display:none!important;}.ocnav-right .ocnav-btn{display:none!important;}}
-@media(max-width:380px){.ocnav-logo{transition:color 0.2s;}
-.ocnav-logo:hover{color:#F5C200 !important;}
-.ocnav-logo{font-size:13px;}.ocnav-logo svg{width:22px;height:25px;}}
-</style>
-
-
-<nav class="ocnav">
-  <a href="index.html#home" class="ocnav-logo">
-    <svg viewBox="0 0 60 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <polyline points="8,27 30,14 52,27" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <line x1="8" y1="27" x2="8" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
-      <line x1="52" y1="27" x2="52" y2="33" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round"></line>
-      <polyline points="8,36 8,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <polyline points="52,36 52,53 30,62" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <polyline points="17,39 17,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <polyline points="43,39 43,51 30,58" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></polyline>
-      <path d="M30,18 L31.6,27.5 L41,30 L31.6,32.5 L30,42 L28.4,32.5 L19,30 L28.4,27.5 Z" fill="#0a0a0a"></path>
-    </svg>
-    OrionCodix
-  </a>
-  <div class="ocnav-links">
-    <a href="index.html#home" class="ocnav-link active">Home</a>
-    <a href="index.html#howitworks" class="ocnav-link">How it works</a>
-    <a href="index.html#whatyouget" class="ocnav-link">What you get</a>
-    <a href="index.html#ourworks" class="ocnav-link">Our Works</a>
-    <a href="index.html#footer" class="ocnav-link">Contact</a>
-  </div>
-  <div class="ocnav-right">
-    <a href="Startmyproject.html" class="ocnav-btn">
-      <div class="pi"><span class="pt">Start My Project</span><span class="pt">Start My Project</span></div>
-    </a>
-    <button class="ocnav-burger" id="ocBurger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="ocnav-drawer" id="ocDrawer">
-  <a href="index.html#home" class="active">Home</a>
-  <a href="index.html#howitworks">How it works</a>
-  <a href="index.html#whatyouget">What you get</a>
-  <a href="index.html#ourworks">Our Works</a>
-  <a href="index.html#footer">Contact</a>
-  <div class="ocnav-drawer-divider"></div>
-  <div class="ocnav-drawer-cta">
-    <a href="Startmyproject.html" class="ocnav-drawer-btn">Start My Project</a>
-  </div>
-</div>
-[JS_CODE_1]
-
 
 
 
